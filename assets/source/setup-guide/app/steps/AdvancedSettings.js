@@ -6,6 +6,8 @@ import {
 	Card,
 	CardBody,
 	CheckboxControl,
+	Tooltip,
+	Icon,
 	__experimentalText as Text,
 } from '@wordpress/components';
 import { Spinner } from '@woocommerce/components';
@@ -73,9 +75,17 @@ const AdvancedSettings = ( { view } ) => {
 									</Text>
 									<CheckboxControl
 										label={ __(
-											'Enable Debug Logging',
+											'Enable debug logging',
 											'pinterest-for-woocommerce'
 										) }
+										help={
+											<Tooltip text={ __(
+												'Enable this option to enable logging of all plugin operations for debugging and diagnostics.',
+												'pinterest-for-woocommerce'
+											) }>
+												<Icon icon="editor-help" />
+											</Tooltip>
+										}
 										checked={
 											appSettings.enable_debug_logging
 										}
@@ -92,15 +102,23 @@ const AdvancedSettings = ( { view } ) => {
 										variant="subtitle"
 									>
 										{ __(
-											'Plugin Data',
+											'Clear all settings',
 											'pinterest-for-woocommerce'
 										) }
 									</Text>
 									<CheckboxControl
 										label={ __(
-											'Erase Plugin Data',
+											'Erase all plugin settings after plugin is uninstalled.',
 											'pinterest-for-woocommerce'
 										) }
+										help={
+											<Tooltip text={ __(
+												'Enable this option if you are uninstalling the plugin and want to completely remove all settings.',
+												'pinterest-for-woocommerce'
+											) }>
+												<Icon icon="editor-help" />
+											</Tooltip>
+										}
 										checked={
 											appSettings.erase_plugin_data
 										}
