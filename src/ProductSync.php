@@ -55,7 +55,7 @@ class ProductSync {
 		if ( ! self::is_product_sync_enabled() ) {
 			return;
 		}
-
+		$feeds = API\Base::get_merchant_feed_profiles();
 		self::initialize_feed_components();
 		/**
 		 * Mark feed as needing re-generation whenever a product is edited or changed.

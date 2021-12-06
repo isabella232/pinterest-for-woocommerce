@@ -479,6 +479,16 @@ class Base {
 		);
 	}
 
+	public static function get_merchant_feed_profiles() {
+		$merchant_id = Pinterest_For_Woocommerce()::get_data( 'merchant_id' );
+		return self::make_request(
+			"catalogs/{$merchant_id}/feed_profiles/",
+			'GET',
+			array(),
+			'',
+			HOUR_IN_SECONDS
+		);
+	}
 
 	/**
 	 * Request the managed map representing all of the error, recommendation, and status messages for catalogs.
