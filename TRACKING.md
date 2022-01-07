@@ -17,7 +17,7 @@ Do not edit it manually!
 ### [`wcadmin_pfw_account_connect_button_click`](assets/source/setup-guide/app/components/Account/Connection.js#L37)
 Clicking on "Connect" Pinterest account button.
 #### Emitters
-- [`AccountConnection`](assets/source/setup-guide/app/components/Account/Connection.js#L80)
+- [`AccountConnection`](assets/source/setup-guide/app/components/Account/Connection.js#L82)
 
 ### [`wcadmin_pfw_account_convert_button_click`](assets/source/setup-guide/app/steps/SetupAccount.js#L32)
 Clicking on "… convert your personal account" button.
@@ -36,7 +36,7 @@ Clicking on "Disconnect" Pinterest account button.
 |---|---|---|
 `context` | `string` | `'settings' \| 'wizard'` In which context it was used?
 #### Emitters
-- [`AccountConnection`](assets/source/setup-guide/app/components/Account/Connection.js#L80) with the given `{ context }`
+- [`AccountConnection`](assets/source/setup-guide/app/components/Account/Connection.js#L82) with the given `{ context }`
 
 ### [`wcadmin_pfw_ads_manager_link_click`](assets/source/catalog-sync/sections/SyncState.js#L24)
 Clicking on the "Pinterest ads manager" link.
@@ -104,7 +104,7 @@ Clicking on the link inside the notice.
 |   |   |   |
 |---|---|---|
 `link_id` | `string` | Identifier of the link.
-`context` | `string` | What action was initiated.
+`context` | `string` | Where was the link placed at?
 `href` | `string` | Href to which the user was navigated to.
 #### Emitters
 - [`PrelaunchNotice`](assets/source/components/prelaunch-notice/index.js#L18) `{ context: 'pinterest-landing', link_id: 'prelaunch-notice' }`
@@ -119,7 +119,7 @@ Closing a modal.
 `context` | `string` | `'settings' \| 'wizard'` In which context it was used?
 `action` | `string` | `confirm` - When the final "Yes, I'm sure" button is clicked. <br> `dismiss` -  When the modal is dismissed by clicking on "x", "cancel", overlay, or by pressing a keystroke.
 #### Emitters
-- [`AccountConnection`](assets/source/setup-guide/app/components/Account/Connection.js#L80) with `{ name: 'account-disconnection', … }`
+- [`AccountConnection`](assets/source/setup-guide/app/components/Account/Connection.js#L82) with `{ name: 'account-disconnection', … }`
 
 ### [`wcadmin_pfw_modal_open`](assets/source/setup-guide/app/components/Account/Connection.js#L48)
 Opening a modal.
@@ -129,7 +129,7 @@ Opening a modal.
 `name` | `string` | Which modal is it?
 `context` | `string` | `'settings' \| 'wizard'` In which context it was used?
 #### Emitters
-- [`AccountConnection`](assets/source/setup-guide/app/components/Account/Connection.js#L80) with `{ name: 'account-disconnection', … }`
+- [`AccountConnection`](assets/source/setup-guide/app/components/Account/Connection.js#L82) with `{ name: 'account-disconnection', … }`
 
 ### [`wcadmin_pfw_save_changes_button_click`](assets/source/setup-guide/app/components/SaveSettingsButton.js#L18)
 Clicking on "… Save changes" button.

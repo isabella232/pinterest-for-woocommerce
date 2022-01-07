@@ -19,7 +19,7 @@ import { recordEvent } from '@woocommerce/tracks';
  * @event wcadmin_pfw_get_started_notice_link_click
  *
  * @property {string} link_id Identifier of the link.
- * @property {string} context What action was initiated.
+ * @property {string} context Where was the link placed at?
  * @property {string} href Href to which the user was navigated to.
  *
  *
